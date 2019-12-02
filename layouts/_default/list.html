@@ -1,0 +1,15 @@
+{{ define "main" }}
+<ul>
+	{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 25) }}
+	{{ range $paginator.Pages  }}
+      <li class="h-entry">
+		{{ if .Title }}
+			<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+		{{ end }}
+        <p><a href="{{ .Permalink }}" class="u-url"><span class="post-meta"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a></p>
+         	{{ .Content }}
+      </li>
+    {{ end }}
+  </ul>
+  <p>Subscribe <a href="{{ "feed.xml" | absURL }}">via RSS</a></p>
+{{ end }}
