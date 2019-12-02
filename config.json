@@ -1,0 +1,88 @@
+{
+    "title": "[TITLE]",
+    "author": {
+    	"name": "[TITLE]",
+    	"avatar": "https://micro.blog/[USERNAME]/avatar.jpg",
+    	"username": "[USERNAME]"
+    },
+    "baseURL": "[SCHEME]://[HOSTNAME]/",
+	"outputFormats": {
+		"RSS": {
+			"baseName": "feed"
+		},
+		"JSON": {
+			"baseName": "feed"
+		},
+		"RSD": {
+			"mediaType": "application/xml",
+			"baseName": "rsd",
+			"isPlainText": true,
+			"notAlternative": true
+		},
+		"ArchiveHTML": {
+			"mediaType": "text/html",
+			"path": "archive",
+			"baseName": "index",
+			"isPlainText": false,
+			"notAlternative": true
+		},
+		"ArchiveJSON": {
+			"mediaType": "application/json",
+			"path": "archive",
+			"baseName": "index",
+			"isPlainText": true,
+			"notAlternative": true
+		},
+		"PhotosHTML": {
+			"mediaType": "text/html",
+			"path": "photos",
+			"baseName": "index",
+			"isPlainText": false,
+			"notAlternative": true
+		},
+		"PhotosJSON": {
+			"mediaType": "application/json",
+			"path": "photos",
+			"baseName": "index",
+			"isPlainText": true,
+			"notAlternative": true
+		},
+		"PodcastXML": {
+			"mediaType": "application/rss+xml",
+			"baseName": "podcast",
+			"isPlainText": true,
+			"notAlternative": true
+		}
+	},
+	"outputs": {
+		"home": [ "HTML", "RSS", "JSON", "RSD", "ArchiveHTML", "ArchiveJSON", "PhotosJSON", "PodcastXML" ],
+		"page": [ "HTML" ],
+		"section": [ "HTML" ],
+		"taxonomy": [ "HTML" ],
+		"taxonomyTerm": [ "HTML", "RSS", "JSON" ]
+	},
+	"taxonomies": {
+		"category": "categories"
+	},	
+	"rssLimit": 25,
+	"uglyURLs": false,
+	"blackfriday": {
+		"fractions": false
+	},
+	"enableRobotsTXT": true,
+	"languageCode": "[LANGUAGE]",
+	"paginate": 25,
+	"params": {
+		"description": "Follow <a href=\"https://micro.blog/[USERNAME]\">@[USERNAME] on Micro.blog</a>.",
+		"itunes_description": "[ITUNES_DESCRIPTION]",
+		"itunes_category": "[ITUNES_CATEGORY]",
+		"itunes_subcategory": "[ITUNES_SUBCATEGORY]",
+		"itunes_author": "[ITUNES_AUTHOR]",
+		"itunes_email": "[ITUNES_EMAIL]",
+		"twitter_username": "[TWITTER_USERNAME]",
+		"github_username": "[GITHUB_USERNAME]",
+		"instagram_username": "[INSTAGRAM_USERNAME]",
+		"site_id": "[SITE_ID]",
+		"enable_pagination": false
+	}
+}
